@@ -1,23 +1,16 @@
 import java.util.Scanner;
 
-public class TriangleFactorial {
+ class task1 {
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите число n: ");
-        int n = scanner.nextInt();
+        Scanner iScanner = new Scanner(System.in);
+        System.out.printf("Введите первое число: ");
+        int i = iScanner.nextInt();
+        System.out.printf("Треугольное число: %d\n", giveMeNumber(i));
+        iScanner.close();
+    }
 
-        // Вычисляем n-ое треугольное число
-        int triangleNumber = 0;
-        for (int i = 1; i <= n; i++) {
-            triangleNumber += i;
-        }
-        System.out.println("n-ое треугольное число: " + triangleNumber);
-
-        // Вычисляем n!
-        int factorial = 1;
-        for (int i = 1; i <= n; i++) {
-            factorial *= i;
-        }
-        System.out.println("n!: " + factorial);
+    public static int giveMeNumber(int a) {
+        return (a * (a + 1)) / 2;
     }
 }
